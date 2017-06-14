@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DXEventsMigrator", "DXEventsMigrator\DXEventsMigrator.csproj", "{69BBB3BF-96E5-4D26-8C4C-EC58DC1E8D6B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DXEventsMigratorConsoleApp", "DXEventsMigratorConsoleApp\DXEventsMigratorConsoleApp.csproj", "{C9A81F37-9E0D-428E-B496-B271D2ABC659}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{69BBB3BF-96E5-4D26-8C4C-EC58DC1E8D6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69BBB3BF-96E5-4D26-8C4C-EC58DC1E8D6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69BBB3BF-96E5-4D26-8C4C-EC58DC1E8D6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9A81F37-9E0D-428E-B496-B271D2ABC659}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9A81F37-9E0D-428E-B496-B271D2ABC659}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9A81F37-9E0D-428E-B496-B271D2ABC659}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9A81F37-9E0D-428E-B496-B271D2ABC659}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

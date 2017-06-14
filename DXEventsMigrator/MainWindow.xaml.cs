@@ -34,7 +34,7 @@ namespace DXEventsMigrator
 
             await Task.Run(() =>
             {
-                DoSomeStuffSeparated();
+                MigrateSeparated();
             });
 
             watch.Stop();
@@ -63,7 +63,7 @@ namespace DXEventsMigrator
             return cursor;
         } 
 
-        private void DoSomeStuffSeparated()
+        private void MigrateSeparated()
         {
             using (
                 _session =
@@ -94,7 +94,7 @@ namespace DXEventsMigrator
             }
         }
 
-        private void DoSomeStuff()
+        private void Migrate()
         {
             using (_session = new TimeTableSession { ConnectionString = Configuration.GetConnectionStringByName(ConnectionStringName) })
             {
@@ -111,7 +111,7 @@ namespace DXEventsMigrator
             }
         }
 
-        private void DoSomeStuffWithXPCollection()
+        private void MigrateWithXPCollection()
         {
             GC.Collect();
             using (
@@ -164,10 +164,7 @@ namespace DXEventsMigrator
         {
             _session.BeginTransaction();
 
-            var newSequence = new EventSequence(_session);
-            newSequence.Save();
-
-            foreach (var newEvent in appts.Select(a => eventCreator.CreateEvent(a, e, newSequence)))
+            foreach (var newEvent in appts.Select(a => eventCreator.CreateEvent(a, e)))
             {
                 foreach (var el in e.EventLocations)
                 {
